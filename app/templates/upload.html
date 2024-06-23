@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload Excel File</title>
+  </head>
+  <body>
+    <h1>Upload Excel File</h1>
+    <form action="{{ url_for('main.upload_file') }}" method="post" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+    </form>
+  </body>
+</html>

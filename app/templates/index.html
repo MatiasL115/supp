@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Hello, Flask with SQLAlchemy!</h1>
+    <ul>
+      {% for user in users %}
+        <li>{{ user.username }} - {{ user.email }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('main.add_user') }}">Add a new user</a><br>
+    <a href="{{ url_for('main.map') }}">View Map of Paraguay</a><br>
+    <a href="{{ url_for('main.upload_file') }}">Subir archivo para proyección</a><br>
+  </body>
+</html>

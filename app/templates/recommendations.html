@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Recommendations</title>
+  </head>
+  <body>
+    <h1>Recommendations</h1>
+    <table border="1">
+      <tr>
+        <th>CODIGO</th>
+        <th>NOMBRE PRODUCTO</th>
+        <th>RECOMMENDATION</th>
+      </tr>
+      {% for recommendation in recommendations %}
+      <tr>
+        <td>{{ recommendation['CODIGO'] }}</td>
+        <td>{{ recommendation['NOMBRE PRODUCTO'] }}</td>
+        <td>{{ recommendation['RECOMMENDATION'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="{{ url_for('main.upload_file') }}">Upload Another File</a>
+  </body>
+</html>
